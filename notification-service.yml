@@ -20,4 +20,4 @@ spring:
         spring.json.trusted.packages: java.util,org.addy.corelibrary.model
 
 kafka:
-  topic: hello-ms-notifications 
+  topic: hello-ms-notifications
