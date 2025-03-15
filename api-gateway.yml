@@ -1,10 +1,6 @@
 spring:
   cloud:
     gateway:
-      discovery:
-         locator:
-            enabled: true
-            lower-case-service-id: true
       routes:
         - id: customer-service
           uri: lb://customer-service
@@ -34,6 +30,9 @@ eureka:
 management:
   security:
     enabled: false
+  endpoint:
+    gateway:
+      enabled: true
   endpoints:
     web:
       exposure:
