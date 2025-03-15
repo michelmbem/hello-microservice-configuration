@@ -1,0 +1,23 @@
+spring:
+  mail:
+    host: localhost
+    port: 1025
+    protocol: smtp
+    properties:
+      mail.smtp.auth: false
+      mail.smtp.starttls.enable: false
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-service
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: java.util,org.addy.notificationservice.model,org.addy.orderservice.notification
+
+kafka:
+  topic: hello-ms-notifications 

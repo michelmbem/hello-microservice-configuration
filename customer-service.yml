@@ -1,0 +1,39 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: hello_ms_customers
+      username: admin
+      password: mongoadm
+      authentication-database: admin
+
+server:
+  port: 8082
+ 
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+     
+management:
+  security:
+    enabled: false
+  web:
+    exposure:
+      include: "*"
+  tracing:
+    sampling:
+      probability: 1
+
+logging:
+  level:
+    org.addy.customerservice: DEBUG
