@@ -1,19 +1,21 @@
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: customer-service
-          uri: lb://CUSTOMER-SERVICE
+          uri: lb://customer-service
           predicates:
             - Path=/customers/**
         - id: product-service
-          uri: lb://PRODUCT-SERVICE
+          uri: lb://product-service
           predicates:
-            - Path=/categories/**
             - Path=/products/**
-            - Path=/product-images/**
         - id: order-service
-          uri: lb://ORDER-SERVICE
+          uri: lb://order-service
           predicates:
             - Path=/orders/**
 
@@ -28,9 +30,6 @@ eureka:
 management:
   security:
     enabled: false
-  endpoint:
-    gateway:
-      enabled: true
   endpoints:
     web:
       exposure:
