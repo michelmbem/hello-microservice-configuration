@@ -34,7 +34,7 @@ management:
       include: "*"
   tracing:
     sampling:
-      probability: 1
+      probability: 1.0
  
 logging:
   level:
