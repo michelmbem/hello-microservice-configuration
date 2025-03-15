@@ -27,9 +27,10 @@ eureka:
 management:
   security:
     enabled: false
-  web:
-    exposure:
-      include: "*"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   tracing:
     sampling:
       probability: 1.0
