@@ -1,5 +1,9 @@
 spring:
   cloud:
+    discovery:
+      locator:
+        enabled: true
+        lower-case-service-id: true
     gateway:
       routes:
         - id: customer-service
