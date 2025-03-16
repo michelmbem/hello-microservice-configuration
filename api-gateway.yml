@@ -29,7 +29,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: info,health
+  info:
+    env:
+      enabled: true
   tracing:
     sampling:
       probability: 1.0
