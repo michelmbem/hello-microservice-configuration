@@ -7,15 +7,17 @@ spring:
           lower-case-service-id: true
       routes:
         - id: customer-service
-          uri: lb://customer-service
+          uri: http://customer-service
           predicates:
             - Path=/customers/**
         - id: product-service
-          uri: lb://product-service
+          uri: http://product-service
           predicates:
+            - Path=/categories/**
             - Path=/products/**
+            - Path=/product-images/**
         - id: order-service
-          uri: lb://order-service
+          uri: http://order-service
           predicates:
             - Path=/orders/**
 
@@ -24,7 +26,6 @@ server:
  
 eureka:
   client:
-    register-with-eureka: false
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
      
