@@ -36,3 +36,11 @@ management:
   tracing:
     sampling:
       probability: 1.0
+
+info:
+  application:
+    name: ${spring.application.name}
+    description: API Gateway for the hello-microservice application
+    version: '@project.version@'
+    spring-cloud-version: '@spring-cloud.version@'
+    spring-boot-version: '@project.parent.version@'
