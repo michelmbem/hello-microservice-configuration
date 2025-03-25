@@ -56,6 +56,6 @@ mail:
   sender: no-reply@addy.org
 
 jwt:
-  resourceaccess:
+  resource_access:
     resource_id: order-service
     principal_claim: preferred_username
