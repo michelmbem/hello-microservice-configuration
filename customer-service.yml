@@ -10,27 +10,23 @@ spring:
 
 server:
   port: 8082
- 
+
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
     preferIpAddress: true
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
-     
+
 management:
   security:
     enabled: false
   endpoints:
     web:
       exposure:
-        include: info,health
+        include:
+          - info
+          - health
   tracing:
     sampling:
       probability: 1.0
