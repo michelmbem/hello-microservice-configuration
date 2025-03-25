@@ -20,6 +20,15 @@ spring:
         jwt:
           issuer-uri: http://localhost:8181/realms/hello-microservice
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+      client:
+        registration:
+          customer-service:
+            authorization-grant-type: client_credentials
+            client-id: customer-service
+            client-secret: please-change-me
+        provider:
+          customer-service:
+            token-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}
 
 server:
   port: 8083
