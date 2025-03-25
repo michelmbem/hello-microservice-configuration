@@ -53,4 +53,4 @@ kafka:
     notifications: hello-ms-notifications
 
 mail:
-  sender: no-reply@addy.org
+  from: no-reply@addy.org
