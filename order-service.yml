@@ -25,7 +25,7 @@ spring:
           customer-service:
             authorization-grant-type: client_credentials
             client-id: customer-service
-            client-secret: please-change-me
+            client-secret: hu4rvwyZC2CKWKjuS4QE9rH2n0jcAQaw
         provider:
           customer-service:
             token-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}
