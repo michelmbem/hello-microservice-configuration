@@ -7,6 +7,12 @@ spring:
       username: admin
       password: mongoadm
       authentication-database: admin
+  security:
+    oauth2:
+      client:
+        provider:
+          customer-service:
+            token-uri: http://localhost:8181/realms/hello-microservice
 
 server:
   port: 8082
