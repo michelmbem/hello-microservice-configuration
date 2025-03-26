@@ -31,8 +31,10 @@ spring:
             client-id: product-service
             client-secret: 0NLS8ksADbkFbSMn75CcDytdWcwIzVFt
         provider:
-          keycloak:
+          customer-service:
             token-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/token
+          product-service:
+            token-uri: ${spring.security.oauth2.client.provider.customer-service.token-uri}
 
 server:
   port: 8083
