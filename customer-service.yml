@@ -10,6 +10,11 @@ spring:
   security:
     oauth2:
       client:
+        registration:
+          customer-service:
+            authorization-grant-type: client_credentials
+            client-id: customer-service
+            client-secret: hu4rvwyZC2CKWKjuS4QE9rH2n0jcAQaw
         provider:
           customer-service:
             token-uri: http://localhost:8181/realms/hello-microservice
