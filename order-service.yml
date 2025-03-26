@@ -26,8 +26,12 @@ spring:
             authorization-grant-type: client_credentials
             client-id: customer-service
             client-secret: hu4rvwyZC2CKWKjuS4QE9rH2n0jcAQaw
+          product-service:
+            authorization-grant-type: client_credentials
+            client-id: product-service
+            client-secret: 0NLS8ksADbkFbSMn75CcDytdWcwIzVFt
         provider:
-          customer-service:
+          keycloak:
             token-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/token
 
 server:
