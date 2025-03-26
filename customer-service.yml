@@ -17,7 +17,9 @@ spring:
             client-secret: hu4rvwyZC2CKWKjuS4QE9rH2n0jcAQaw
         provider:
           keycloak:
-            token-uri: http://localhost:8181/realms/hello-microservice
+            base-uri: http://localhost:8181/realms/hello-microservice/protocol/openid-connect
+            token-uri: ${spring.security.oauth2.client.provider.keycloak.base-uri}/token
+            jwk-set-uri: ${spring.security.oauth2.client.provider.keycloak.base-uri}/certs
 
 server:
   port: 8082

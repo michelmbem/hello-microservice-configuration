@@ -28,7 +28,7 @@ spring:
             client-secret: hu4rvwyZC2CKWKjuS4QE9rH2n0jcAQaw
         provider:
           customer-service:
-            token-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}
+            token-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/token
 
 server:
   port: 8083
