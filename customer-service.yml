@@ -20,6 +20,7 @@ spring:
             base-uri: http://localhost:8181/realms/hello-microservice/protocol/openid-connect
             token-uri: ${spring.security.oauth2.client.provider.keycloak.base-uri}/token
             jwk-set-uri: ${spring.security.oauth2.client.provider.keycloak.base-uri}/certs
+            authorization-uri: ${spring.security.oauth2.client.provider.keycloak.base-uri}/auth
 
 server:
   port: 8082
