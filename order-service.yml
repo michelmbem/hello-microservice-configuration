@@ -61,24 +61,7 @@ management:
 
 logging:
   level:
-    root: INFO
     org.addy.orderservice: DEBUG
-  logstash:
-    enabled: true
-    host: localhost
-    port: 5044
-    queueSize: 512
-    customFields: '{"product":"hello-microservice","module":"order-service"}'
-  logback:
-    appenders:
-      logstash:
-        type: net.logstash.logback.appender.LogstashTcpSocketAppender
-        name: LOGSTASH
-        destination: ${logging.logstash.host}:${logging.logstash.port}
-        encoder:
-          type: net.logstash.logback.encoder.LogstashEncoder
-          customFields: ${logging.logstash.customFields}
-        queueSize: ${logging.logstash.queueSize}
 
 kafka:
   topic:
