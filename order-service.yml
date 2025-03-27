@@ -63,7 +63,6 @@ logging:
   logstash:
     host: localhost
     port: 5044
-    custom-fields: '{"product": "hello-microservice", "module": "order-service"}'
 
 kafka:
   topic:
