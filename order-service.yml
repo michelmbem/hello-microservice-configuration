@@ -60,8 +60,10 @@ management:
       probability: 1.0
 
 logging:
-  level:
-    org.addy.orderservice: DEBUG
+  logstash:
+    host: localhost
+    port: 5044
+    custom-fields: '{"product": "hello-microservice", "module": "order-service"}'
 
 kafka:
   topic:
