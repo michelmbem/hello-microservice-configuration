@@ -58,10 +58,27 @@ management:
   tracing:
     sampling:
       probability: 1.0
- 
+
 logging:
   level:
+    root: INFO
     org.addy.orderservice: DEBUG
+  logstash:
+    enabled: true
+    host: localhost
+    port: 5044
+    queueSize: 512
+    customFields: '{"app_name":"order-service","environment":"dev"}'
+  logback:
+    appenders:
+      logstash:
+        type: net.logstash.logback.appender.LogstashTcpSocketAppender
+        name: LOGSTASH
+        destination: ${logging.logstash.host}:${logging.logstash.port}
+        encoder:
+          type: net.logstash.logback.encoder.LogstashEncoder
+          customFields: ${logging.logstash.customFields}
+        queueSize: ${logging.logstash.queueSize}
 
 kafka:
   topic:
