@@ -38,5 +38,6 @@ management:
       probability: 1.0
 
 logging:
-  level:
-    org.addy.customerservice: DEBUG
+  logstash:
+    host: localhost
+    port: 5044

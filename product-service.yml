@@ -38,7 +38,8 @@ management:
   tracing:
     sampling:
       probability: 1.0
- 
+
 logging:
-  level:
-    org.addy.productservice: DEBUG
+  logstash:
+    host: localhost
+    port: 5044

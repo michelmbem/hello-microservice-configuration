@@ -19,5 +19,10 @@ spring:
       properties:
         spring.json.trusted.packages: java.util,org.addy.messaging
 
+logging:
+  logstash:
+    host: localhost
+    port: 5044
+
 kafka:
   topic: hello-ms-notifications
