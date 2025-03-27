@@ -68,7 +68,7 @@ logging:
     host: localhost
     port: 5044
     queueSize: 512
-    customFields: '{"app_name":"order-service","environment":"dev"}'
+    customFields: '{"product":"hello-microservice","module":"order-service"}'
   logback:
     appenders:
       logstash:
